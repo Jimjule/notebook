@@ -13,7 +13,7 @@ class Notebook
     @notes << note
   end
 
-  def method_name
-
+  def tag(tag_name)
+    @notes[0].tag << tag_name
   end
 end

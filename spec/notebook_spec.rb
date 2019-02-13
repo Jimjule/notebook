@@ -13,4 +13,11 @@ describe Notebook do
     notebook.create
     expect(notebook.notes.length).to eq 1
   end
+
+  it "tags a note stored in notebook" do
+    notebook = Notebook.new
+    notebook.create
+    notebook.tag("calendar")
+    expect(notebook.notes[0].tag).to eq ("calendar")
+  end
 end
